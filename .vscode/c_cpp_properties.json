@@ -1,0 +1,51 @@
+{
+    "env": {
+        // Build paths need to exactly match the build kits being used.
+        "visualStudioBuildPath": "${workspaceFolder}/build/Visual Studio Community 2022 Release - amd64",
+        "mingwBuildPath": "${workspaceFolder}/build/GCC 12.2.0 x86_64-w64-mingw32",
+        // Add project-specific paths here
+        "commonIncludePaths": [
+            "${workspaceFolder}/include"
+        ],
+        // Add project-specific definitions here
+        "commonDefinitions" : [
+            "_DEBUG",
+            "UNICODE",
+            "_UNICODE",
+            "NC_ASSERT_ENABLED"
+        ]
+    },
+    "configurations": [
+        {
+            "name": "VS-2022-amd64",
+            "includePath": [
+                "${commonIncludePaths}",
+                // Add includes from fetched dependencies here
+                // e.g. ${visualStudioBuildPath}/_deps/someLib-src/include
+            ],
+            "defines": [
+                "${commonDefinitions}"
+            ],
+            // For msvc, let "compilerPath" use default search 
+            "cStandard": "c17",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "windows-msvc-x64"
+        },
+        {
+            "name": "Mingw-12.2.0-x86_64",
+            "includePath": [
+                "${commonIncludePaths}",
+                // Add includes from fetched dependencies here
+                // e.g. ${mingwBuildPath}/_deps/someLib-src/include
+            ],
+            "defines": [
+                "${commonDefinitions}"
+            ],
+            "compilerPath": "C:\\Program Files\\mingw64\\bin\\g++.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++23",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
