@@ -1,0 +1,21 @@
+{
+    // CMake Tools Extension settings:
+    // These can be set in user settings to share across workspaces
+    // Also, ctestDefaultArgs can't be set here, but I remove the CDash test action stuff ('-T' and 'test')
+    // "cmake.generator": "Ninja",
+    // "cmake.sourceDirectory": "${workspaceFolder}",
+    // "cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}",
+    // "cmake.installPrefix": "${workspaceFolder}/install",
+    // "cmake.configureOnEdit": false,
+    // "cmake.saveBeforeBuild": false,
+    // "cmake.ctestArgs": [
+    //     "--test-dir",
+    //     "${workspaceFolder}/build/${buildKit}/test"
+    // ],
+
+    // Since these vary across projects and builds, set them here or in workspace settings.
+    "cmake.configureSettings": {
+        // e.g.
+        // "NC_BUILD_TESTS": "ON"
+    },
+}
